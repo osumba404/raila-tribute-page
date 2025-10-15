@@ -39,18 +39,34 @@
   </header>
 
   <main id="main" class="main" role="main">
-    <section class="hero">
+    <section class="hero" style="background-image:url('imgs/raila1.jpeg')">
+      <div class="kenya-flag" aria-hidden="true">
+        <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" role="img">
+          <rect width="160" height="100" fill="#006600"/>
+          <rect y="33.33" width="160" height="33.33" fill="#ffffff"/>
+          <rect y="33.33" width="160" height="33.33" fill="#BB0000"/>
+          <rect y="66.66" width="160" height="33.34" fill="#000000"/>
+          <g class="cloth">
+            <ellipse cx="80" cy="50" rx="30" ry="20" fill="#000"/>
+            <ellipse cx="80" cy="50" rx="26" ry="16" fill="#BB0000"/>
+            <rect x="78" y="20" width="4" height="60" fill="#fff"/>
+            <path d="M70 28 l20 44" stroke="#fff" stroke-width="3"/>
+            <path d="M90 28 l-20 44" stroke="#fff" stroke-width="3"/>
+          </g>
+        </svg>
+      </div>
+      <div class="candle" aria-hidden="true">
+        <div class="flame"></div>
+        <div class="stick"></div>
+      </div>
       <div class="container hero-inner">
-        <div class="hero-media">
-          <img src="imgs/raila1.jpeg" alt="Raila Odinga in 2009" />
-        </div>
         <div class="hero-content">
           <h1>In Loving Memory of The Right Honourable Raila Amolo Odinga</h1>
-          <p class="dates">7 January 1945 – 15 October 2025</p>
-          <p class="lead">On 15 October 2025, Odinga died of cardiac arrest in Koothattukulam, India at the age of 80.</p>
+          <p class="dates">7 January 1945 - 15 October 2025</p>
+          <p class="lead">A life dedicated to democracy, justice, and the unity of Kenya and Africa.</p>
           <div class="hero-actions">
             <a class="btn primary" href="political-timeline.html">Explore His Journey</a>
-            <a class="btn" href="#condolences">Leave a Message</a>
+            <a class="btn" href="achievements-impact.html">See Achievements</a>
           </div>
         </div>
       </div>
@@ -103,26 +119,6 @@
       </div>
     </section>
 
-    <section id="condolences" class="section">
-      <div class="container">
-        <h2>Condolences</h2>
-        <form id="condolenceForm" class="condolence-form" aria-label="Leave a condolence message">
-          <div class="grid cols-2">
-            <label>Full Name
-              <input type="text" name="name" required />
-            </label>
-            <label>Location
-              <input type="text" name="location" />
-            </label>
-          </div>
-          <label>Message
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button class="btn primary" type="submit">Submit Message</button>
-        </form>
-        <div id="condolenceList" class="condolence-list" aria-live="polite" aria-busy="false"></div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
