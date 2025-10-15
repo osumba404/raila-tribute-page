@@ -79,6 +79,7 @@ a:hover{text-decoration:underline}
 /* Mobile nav dropdown panel */
 @media (max-width:640px){
   .site-header{position:sticky;top:0;background:var(--bg);z-index:10}
+  .header-inner{position:relative}
   .site-nav{display:none;position:absolute;left:0;right:0;top:56px;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.25)}
   .site-nav.open{display:block}
   .site-nav ul{list-style:none;margin:0;padding:.5rem}
