@@ -70,14 +70,29 @@ a:hover{text-decoration:underline}
 .hero .hero-content .lead{font-size:1.05rem;color:#eaeaea;max-width:60ch}
 .hero .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem}
 
-/* Kenya flag (simple SVG) with gentle wave */
-.kenya-flag{position:absolute;top:1rem;right:1rem;width:92px;height:auto;z-index:2;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
-.kenya-flag svg{display:block}
-.kenya-flag .cloth{transform-origin:left center;animation:wave 3.5s ease-in-out infinite}
-@keyframes wave{0%{transform:skewY(0deg)}50%{transform:skewY(3deg)}100%{transform:skewY(0deg)}}
-
 /* Candle with flickering flame */
 .candle{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:flex-end;gap:.3rem;z-index:2}
 .candle .stick{width:10px;height:40px;background:#c97a3a;border-radius:3px 3px 0 0;box-shadow:inset 0 0 6px rgba(0,0,0,.35)}
 .candle .flame{width:12px;height:18px;background:radial-gradient(ellipse at center,#ffd27a 0%,#ff8b3d 60%,rgba(255,139,61,0) 70%);border-radius:50% 50% 50% 50%;transform:translateY(2px);animation:flicker 1.2s infinite ease-in-out;filter:drop-shadow(0 0 6px rgba(255,165,0,.55))}
 @keyframes flicker{0%{transform:translateY(2px) scale(1);opacity:.9}50%{transform:translateY(1px) scale(1.06);opacity:1}100%{transform:translateY(2px) scale(1);opacity:.9}}
+
+/* Mobile nav dropdown panel */
+@media (max-width:640px){
+  .site-header{position:sticky;top:0;background:var(--bg);z-index:10}
+  .site-nav{display:none;position:absolute;left:0;right:0;top:56px;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .site-nav.open{display:block}
+  .site-nav ul{list-style:none;margin:0;padding:.5rem}
+  .site-nav li a{display:block;padding:.7rem .75rem;border-radius:.5rem}
+  .site-nav li a:hover{background:rgba(255,255,255,.06)}
+}
+
+/* Footer quick links and sources */
+.footer-columns{display:grid;gap:1rem}
+@media(min-width:720px){.footer-columns{grid-template-columns:1fr 1fr}}
+.footer-title{font-weight:700;margin:0 0 .4rem;font-size:1rem}
+.footer-links,.footer-sources{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.footer-sources li{color:var(--muted)}
+.kenya-flag{position:absolute;top:1rem;right:1rem;width:92px;height:auto;z-index:2;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+.kenya-flag svg{display:block}
+.kenya-flag .cloth{transform-origin:left center;animation:wave 3.5s ease-in-out infinite}
+@keyframes wave{0%{transform:skewY(0deg)}50%{transform:skewY(3deg)}100%{transform:skewY(0deg)}}
